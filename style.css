@@ -1,0 +1,53 @@
+:root {
+  --primary-blue: #3B78C3;
+  --primary-orange: #C4601C;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+}
+
+h2, h4, h5 {
+  font-weight: 600;
+}
+
+.text-primary {
+  color: var(--primary-blue) !important;
+}
+
+.text-orange {
+  color: var(--primary-orange) !important;
+}
+
+.navbar {
+  background-color: var(--primary-blue);
+}
+
+.tour-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #fff;
+  transition: transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.tour-card:hover {
+  transform: scale(1.02);
+}
+
+.tour-card h5 {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #222;
+}
+
+.btn-primary {
+  background-color: var(--primary-orange);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #a44c13;
+}

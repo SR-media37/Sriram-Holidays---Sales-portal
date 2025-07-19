@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Booking Form | Sriram Holidays</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .section-title {
+      color: #C4601C;
+      font-weight: 600;
+    }
+    label {
+      font-weight: 500;
+    }
+    .add-customer-btn {
+      background-color: #3B78C3;
+      color: white;
+    }
+    .remove-btn {
+      color: red;
+      cursor: pointer;
+    }
+    .form-section {
+      background: #fff;
+      border-radius: 6px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+    }
+    .btn-success {
+      background-color: #C4601C;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container my-5">
+  <h2 class="text-center section-title mb-4">📝 Tour Booking Form</h2>
+
+  <form id="bookingForm">
+    <div id="customerSection">
+      <div class="customer-block form-section">
+        <h5 class="mb-3 text-primary">Customer Details</h5>
+        <div class="row g-3 row-cols-1 row-cols-md-2">
+          <div class="col">
+            <label>First Name</label>
+            <input type="text" class="form-control" name="firstName[]" required>
+          </div>
+          <div class="col">
+            <label>Last Name</label>
+            <input type="text" class="form-control" name="lastName[]" required>
+          </div>
+          <div class="col">
+            <label>Passport Number</label>
+            <input type="text" class="form-control" name="passportNumber[]" required>
+          </div>
+          <div class="col">
+            <label>PAN Card Upload</label>
+            <input type="file" class="form-control" name="panCard[]" required>
+          </div>
+          <div class="col">
+            <label>Passport Issue Date</label>
+            <input type="date" class="form-control" name="issueDate[]" required>
+          </div>
+          <div class="col">
+            <label>Passport Expiry Date</label>
+            <input type="date" class="form-control" name="expiryDate[]" required>
+          </div>
+        </div>
+
+        <div class="row g-3 mt-3">
+          <div class="col-md-6">
+            <label>Passport Front</label>
+            <input type="file" class="form-control" name="passportFront[]" required>
+          </div>
+          <div class="col-md-6">
+            <label>Passport Back</label>
+            <input type="file" class="form-control" name="passportBack[]" required>
+          </div>
+        </div>
+
+        <div class="row g-3 mt-3 row-cols-1 row-cols-sm-2 row-cols-md-4">
+          <div class="col">
+            <label>Doc 1</label>
+            <input type="file" class="form-control" name="doc1[]">
+          </div>
+          <div class="col">
+            <label>Doc 2</label>
+            <input type="file" class="form-control" name="doc2[]">
+          </div>
+          <div class="col">
+            <label>Doc 3</label>
+            <input type="file" class="form-control" name="doc3[]">
+          </div>
+          <div class="col">
+            <label>Doc 4</label>
+            <input type="file" class="form-control" name="doc4[]">
+          </div>
+        </div>
+
+        <div class="text-end mt-3">
+          <span class="remove-btn d-none">🗑 Remove</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mb-4">
+      <button type="button" class="btn add-customer-btn" onclick="addCustomer()">+ Add Another Customer</button>
+    </div>
+
+    <div class="form-section">
+      <h5 class="mb-3 text-primary">🧭 Tour Selection</h5>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label>Tour Name</label>
+          <select class="form-select" name="tourName" required>
+            <option value="">Select Tour</option>
+            <option>Thailand Tour</option>
+            <option>Dubai Tour</option>
+            <option>Sri Lanka Ramayana Yatra</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label>Travel Month</label>
+          <select class="form-select" name="travelDate" required>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h5 class="mb-3 text-primary">💰 Price Options</h5>
+      <div class="form-check">
+        <input class="form-check-input price-option" type="checkbox" value="29990" id="price1">
+        <label class="form-check-label" for="price1">₹29,990 (Adult)</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input price-option" type="checkbox" value="34220" id="price2">
+        <label class="form-check-label" for="price2">₹34,220 (Senior)</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input price-option" type="checkbox" value="18000" id="price3">
+        <label class="form-check-label" for="price3">₹18,000 (Child)</label>
+      </div>
+      <div class="mt-3 fs-5 fw-bold">
+        Total Amount: ₹<span id="totalPrice">0</span>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-success px-4 py-2">✅ Save Booking</button>
+    </div>
+  </form>
+</div>
+
+<!-- Scripts -->
+<script>
+  function addCustomer() {
+    const section = document.querySelector('.customer-block');
+    const clone = section.cloneNode(true);
+    clone.querySelectorAll('input').forEach(input => input.value = "");
+    clone.querySelector('.remove-btn').classList.remove('d-none');
+    document.getElementById('customerSection').appendChild(clone);
+  }
+
+  document.addEventListener("click", function(e) {
+    if (e.target.classList.contains("remove-btn")) {
+      e.target.closest('.customer-block').remove();
+    }
+  });
+
+  // Price Calculation
+  const priceCheckboxes = document.querySelectorAll('.price-option');
+  const totalPriceEl = document.getElementById('totalPrice');
+  priceCheckboxes.forEach(cb => {
+    cb.addEventListener('change', () => {
+      let total = 0;
+      priceCheckboxes.forEach(box => {
+        if (box.checked) total += parseInt(box.value);
+      });
+      totalPriceEl.textContent = total;
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

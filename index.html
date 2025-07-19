@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sriram Holidays | Sales Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-orange: #C4601C;
+      --primary-blue: #3B78C3;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .text-orange {
+      color: var(--primary-orange);
+    }
+    .text-blue {
+      color: var(--primary-blue);
+    }
+    .navbar {
+      background-color: var(--primary-blue) !important;
+    }
+    .btn-primary {
+      background-color: var(--primary-blue);
+      border-color: var(--primary-blue);
+    }
+    .btn-primary:hover {
+      background-color: #2e61a5;
+      border-color: #2e61a5;
+    }
+    .tour-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      background: #fff;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .tour-card:hover {
+      transform: scale(1.02);
+    }
+    .navbar-brand img {
+      height: 44px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="assets/images/Sriram Holidays Hyd Logo.jpg" alt="Sriram Holidays Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <!-- International Tours -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            International Tours
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#thailand">Thailand</a></li>
+            <li><a class="dropdown-item" href="#dubai">Dubai</a></li>
+            <li><a class="dropdown-item" href="#bali">Bali</a></li>
+            <li><a class="dropdown-item" href="#singapore">Singapore</a></li>
+            <li><a class="dropdown-item" href="#malaysia">Malaysia</a></li>
+            <li><a class="dropdown-item" href="#srilanka">Sri Lanka</a></li>
+            <li><a class="dropdown-item" href="#maldives">Maldives</a></li>
+            <li><a class="dropdown-item" href="#europe">Europe</a></li>
+            <li><a class="dropdown-item" href="#australia">Australia</a></li>
+          </ul>
+        </li>
+
+        <!-- Domestic Tours -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Domestic Tours
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#kerala">Kerala</a></li>
+            <li><a class="dropdown-item" href="#goa">Goa</a></li>
+            <li><a class="dropdown-item" href="#kashmir">Kashmir</a></li>
+            <li><a class="dropdown-item" href="#manali">Manali</a></li>
+            <li><a class="dropdown-item" href="#ooty">Ooty</a></li>
+            <li><a class="dropdown-item" href="#varanasi">Varanasi</a></li>
+            <li><a class="dropdown-item" href="#rajasthan">Rajasthan</a></li>
+            <li><a class="dropdown-item" href="#hampi">Hampi</a></li>
+            <li><a class="dropdown-item" href="#arunachal">Arunachal</a></li>
+          </ul>
+        </li>
+
+        <!-- Manage -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Manage
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="manage/package-list.html">Packages</a></li>
+            <li><a class="dropdown-item" href="manage/sightseeing.html">Sightseeing</a></li>
+            <li><a class="dropdown-item" href="manage/email-configure.html">Email</a></li>
+            <li><a class="dropdown-item" href="manage/hotel.html">Hotel</a></li>
+            <li><a class="dropdown-item" href="manage/tags.html">Tags</a></li>
+            <li><a class="dropdown-item" href="manage/branch.html">Branch</a></li>
+          </ul>
+        </li>
+
+        <!-- Booking -->
+        <li class="nav-item">
+          <a class="nav-link" href="booking.html">Booking</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container py-5">
+  <h2 class="text-center text-blue mb-5">🌍 Sriram Holidays - Sales Portal</h2>
+
+  <!-- International Tours -->
+  <h4 class="text-orange mb-4">🌐 International Tours</h4>
+  <div class="row gy-4">
+    <!-- Each column -->
+    <div class="col-md-4" id="thailand">
+      <div class="tour-card">
+        <img src="assets/images/thailand post1.jpg" class="img-fluid rounded mb-2" alt="Thailand">
+        <h5>Thailand – ₹29,990</h5>
+        <a href="tours/international/tour-thailand.html" class="btn btn-primary mt-2">View</a>
+      </div>
+    </div>
+    <div class="col-md-4" id="dubai">
+      <div class="tour-card">
+        <img src="assets/images/dubai post1.jpg" class="img-fluid rounded mb-2" alt="Dubai">
+        <h5>Dubai – ₹49,999</h5>
+        <a href="tours/international/tour-dubai.html" class="btn btn-primary mt-2">View</a>
+      </div>
+    </div>
+
+    <div class="col-md-4" id="srilanka">
+      <div class="tour-card">
+        <img src="assets/images/srilanka post1.jpg" class="img-fluid rounded mb-2" alt="Sri Lanka">
+        <h5>Sri Lanka – ₹34,500</h5>
+        <a href="tours/international/tour-srilanka.html" class="btn btn-primary mt-2">View</a>
+      </div>
+    </div>
+    
+    <div class="col-md-4" id="bali">
+      <div class="tour-card">
+        <img src="assets/images/bali post1.jpg" class="img-fluid rounded mb-2" alt="Bali">
+        <h5>Bali – ₹39,999</h5>
+        <a href="tours/international/tour-bali.html" class="btn btn-primary mt-2">View</a>
+      </div>
+    </div>
+    <div class="col-md-4" id="singapore">
+      <div class="tour-card">
+        <img src="assets/images/singapore post1.jpg" class="img-fluid rounded mb-2" alt="Singapore">
+        <h5>Singapore – ₹45,000</h5>
+        <a href="tours/international/tour-singapore.html" class="btn btn-primary mt-2">View</a>
+      </div>
+    </div>
+    <div class="col-md-4" id="malaysia">
+      <div class="tour-card">
+        <img src="assets/images/malaysia post1.jpg" class="img-fluid rounded mb-2" alt="Malaysia">
+        <h5>Malaysia – ₹41,000</h5>
+        <a href="tours/international/tour-malaysia.html" class="btn btn-primary mt-2">View</a>
+      </div>
+    </div>
+    
+    <div class="col-md-4" id="maldives">
+      <div class="tour-card">
+        <img src="assets/images/maldives post1.jpg" class="img-fluid rounded mb-2" alt="Maldives">
+        <h5>Maldives – ₹55,000</h5>
+        <a href="tours/international/tour-maldives.html" class="btn btn-primary mt-2">View</a>
+      </div>
+    </div>
+    <div class="col-md-4" id="europe">
+      <div class="tour-card">
+        <img src="assets/images/europe post1.jpg" class="img-fluid rounded mb-2" alt="Europe">
+        <h5>Europe – ₹1,50,000</h5>
+        <a href="tours/international/tour-europe.html" class="btn btn-primary mt-2">View</a>
+      </div>
+    </div>
+    <div class="col-md-4" id="australia">
+      <div class="tour-card">
+        <img src="assets/images/australia post1.jpg" class="img-fluid rounded mb-2" alt="Australia">
+        <h5>Australia – ₹1,25,000</h5>
+        <a href="tours/international/tour-australia.html" class="btn btn-primary mt-2">View</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Domestic Tours -->
+  <h4 class="text-orange mt-5 mb-4">🇮🇳 Domestic Tours</h4>
+  <div class="row gy-4">
+    <div class="col-md-4" id="kerala">
+      <div class="tour-card">
+        <img src="assets/images/kerala post1.jpg" class="img-fluid rounded mb-2" alt="Kerala">
+        <h5>Kerala – ₹19,999</h5>
+        <a href="tours/domestic/tour-kerala.html" class="btn btn-primary mt-2">View</a>
+      </div>
+    </div>
+    <div class="col-md-4" id="goa">
+      <div class="tour-card">
+        <img src="assets/images/goa post1.jpg" class="img-fluid rounded mb-2" alt="Goa">
+        <h5>Goa – ₹12,999</h5>
+        <a href="tours/domestic/tour-goa.html" class="btn btn-primary mt-2">View</a>
+      </div>
+    </div>
+    <div class="col-md-4" id="kashmir">
+      <div class="tour-card">
+        <img src="assets/images/kashmir post1.jpeg" class="img-fluid rounded mb-2" alt="Kashmir">
+        <h5>Kashmir – ₹24,000</h5>
+        <a href="tours/domestic/tour-kashmir.html" class="btn btn-primary mt-2">View</a>
+      </div>
+    </div>
+    <div class="col-md-4" id="manali">
+      <div class="tour-card">
+        <img src="assets/images/manali post1.jpg" class="img-fluid rounded mb-2" alt="Manali">
+        <h5>Manali – ₹18,000</h5>
+        <a href="tours/domestic/tour-manali.html" class="btn btn-primary mt-2">View</a>
+      </div>
+    </div>
+    <div class="col-md-4" id="ooty">
+      <div class="tour-card">
+        <img src="assets/images/ooty post1.jpg" class="img-fluid rounded mb-2" alt="Ooty">
+        <h5>Ooty – ₹14,500</h5>
+        <a href="tours/domestic/tour-ooty.html" class="btn btn-primary mt-2">View</a>
+      </div>
+    </div>
+    <div class="col-md-4" id="varanasi">
+      <div class="tour-card">
+        <img src="assets/images/varanasi post1.jpeg" class="img-fluid rounded mb-2" alt="Varanasi">
+        <h5>Varanasi – ₹15,999</h5>
+        <a href="tours/domestic/tour-varanasi.html" class="btn btn-primary mt-2">View</a>
+      </div>
+    </div>
+    <div class="col-md-4" id="rajasthan">
+      <div class="tour-card">
+        <img src="assets/images/rajasthan post1.jpg" class="img-fluid rounded mb-2" alt="Rajasthan">
+        <h5>Rajasthan – ₹22,000</h5>
+        <a href="tours/domestic/tour-rajasthan.html" class="btn btn-primary mt-2">View</a>
+      </div>
+    </div>
+    <div class="col-md-4" id="hampi">
+      <div class="tour-card">
+        <img src="assets/images/hampi post1.jpg" class="img-fluid rounded mb-2" alt="Hampi">
+        <h5>Hampi – ₹13,000</h5>
+        <a href="tours/domestic/tour-hampi.html" class="btn btn-primary mt-2">View</a>
+      </div>
+    </div>
+    <div class="col-md-4" id="arunachal">
+      <div class="tour-card">
+        <img src="assets/images/arunachalam post1.jpg" class="img-fluid rounded mb-2" alt="Arunachal">
+        <h5>Arunachal – ₹26,000</h5>
+        <a href="tours/domestic/tour-arunachal.html" class="btn btn-primary mt-2">View</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
