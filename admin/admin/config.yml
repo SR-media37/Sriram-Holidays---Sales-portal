@@ -1,0 +1,38 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"      # Where media files are stored in repo
+public_folder: "/assets/uploads"    # Public URL path for those files
+
+site_url: https://sr-media37.github.io/Sales---employee-portal/
+
+collections:
+  - name: "packages"
+    label: "Packages"
+    folder: "content/packages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Description", name: "body", widget: "markdown" }
+
+  - name: "videos"
+    label: "Videos"
+    folder: "content/videos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "YouTube Link", name: "url", widget: "string" }
+
+  - name: "audios"
+    label: "Audios"
+    folder: "content/audios"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Audio File", name: "audio", widget: "file" }
