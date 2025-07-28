@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "Sriram-sales-portal/assets/uploads"
+public_folder: "/Sriram-sales-portal/assets/uploads"
+
+collections:
+  - name: "packages"
+    label: "Tour Packages"
+    folder: "packages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Price", name: "price", widget: "number" }
+      - { label: "Description", name: "description", widget: "text" }
